@@ -6,10 +6,10 @@ import argparse
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Run vllm inference on a dataset.")
-    parser.add_argument("--process_base", type=str, default='/cpfs01/shared/XNLP_H800/chenqiaosheng/Code/ArtifactsBenchmark/dataset/', help="Base directory for dataset and output")
-    parser.add_argument("--dataset_path", type=str, default='artifacts_bench.json', help="Relative path to the dataset file")
-    parser.add_argument("--dump_path", type=str, default='artifacts_bench_qwen3_8b.json', help="Relative path to the output file")
-    parser.add_argument("--model_path", type=str, default="/cpfs01/shared/XNLP_H800/hf_hub/Qwen3-8B", help="Path to the model directory")
+    parser.add_argument("--process_base", type=str, help="Base directory for dataset and output")
+    parser.add_argument("--dataset_path", type=str, help="Relative path to the dataset file")
+    parser.add_argument("--dump_path", type=str, help="Relative path to the output file")
+    parser.add_argument("--model_path", type=str, help="Path to the model directory")
 
     args = parser.parse_args()
 
