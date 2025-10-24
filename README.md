@@ -105,7 +105,17 @@ We provide several ready-to-use scripts to quickly reproduce our experimental re
 bash DesignBench/scripts/designbench_vllm-januscoderv.sh
 ```
 
+```bash
+bash evaluation/ArtifactBench/artifactbench-januscoder.sh
+```
+
+```bash
+bash evaluation/InteractScience/interactscience-januscoderv.sh
+```
+
 For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scripts provided by OpenCompass.
+
+For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark) and [Interactscience](https://github.com/open-compass/InteractScience) can be run the instructions in their original repositories. You can fork/clone the original repos to reuse their official environments and configs.
 
 
 
