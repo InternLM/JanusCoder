@@ -48,7 +48,7 @@ def get_generation_metric(reference_code_path, generated_code_path):
         if not os.path.exists(generated_img_path):
             screenshot(generated_code_path, generated_img_path)   
     except Exception as e:
-        print("异常 in get_generation_metric\n", e)
+        print("Error in get_generation_metric\n", e)
         metrics = {
             "CLIP": 0,
             "MAE": 0,
@@ -114,7 +114,7 @@ def get_edit_metric(web_name, generated_code_path, llm_judge_flag):
         if not os.path.exists(generated_img_path):
             screenshot(generated_code_path, generated_img_path)
     except Exception as e:
-        print("异常 in get_edit_metric.py\n", e)
+        print("Error in get_edit_metric.py\n", e)
         metrics = {
             "CLIP": 0,
             "CMS": 0,
@@ -203,7 +203,7 @@ def get_repair_metric(web_name, generated_code_path, llm_judge_flag):
         if not os.path.exists(generated_img_path):
             screenshot(generated_code_path, generated_img_path)
     except Exception as e:
-        print("异常 in get_edit_metric.py\n", e)
+        print("Error in get_edit_metric.py\n", e)
         metrics = {
             "CLIP": 0,
             "SSIM": 0,
@@ -296,35 +296,3 @@ def evaluate_repair(iterate_range, mode, output_dir, score_file, llm_judge_flag)
 
 
 
-# if __name__ == "__main__":
-#     re_calculate = False
-
-#     models = [
-#         "claude-3-7-sonnet-20250219",
-#         "gpt-4o-2024-11-20",
-#         "gemini-2.0-flash",
-#         "Llama-3.2-90B-Vision-Instruct",
-#         "Llama-3.2-11B-Vision-Instruct",
-#         "pixtral-large-latest",
-#         "pixtral-12b-2409",
-#         "qwen2.5-vl-72b-instruct",
-#         "qwen2.5-vl-7b-instruct"
-#     ]
-
-#     frame_works = ["angular"]
-#     # implemented_frame_works = ["react"]
-#     # modes = ["both", "code", "image"]
-#     # modes = ["both", "code", "image"]
-#     modes = ["code"]
-
-#     # evaluate_edit(models=models, frame_works=frame_works, modes=modes)
-#     # evaluate_repair(models=models, frame_works=frame_works, modes=modes, llm_judge_flag=False)
-#     evaluate_repair(models=models, frame_works=frame_works, modes=modes, llm_judge_flag=True)
-
-#     # frame_works = ["react"]
-#     # implemented_frame_works = ["react"]
-#     # evaluate_generation(models=models, frame_works=frame_works, implemented_frameworks=implemented_frame_works)
-
-
-
-#     # print(get_begin_end(framework=Framework.REACT, task=Task.GENERATION))
