@@ -1,6 +1,6 @@
 # PandasPlotBench
 
-Original Repository: [PandadPlotBench](https://github.com/JetBrains-Research/PandasPlotBench)
+Original Repository: [PandasPlotBench](https://github.com/JetBrains-Research/PandasPlotBench)
 
 ## Usage
 
