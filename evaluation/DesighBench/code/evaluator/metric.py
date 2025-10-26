@@ -20,8 +20,8 @@ model, preprocess = clip.load("ViT-B/32", device=device)
 
 
 GPT4O_CLIENT = OpenAI(
-    base_url='https://api.boyuerichdata.opensphereai.com/v1',
-    api_key='sk-olzJFcRlkMPxeC3fz074Vq9bQKOZxn2La7EJYhYCnfi4I6I3',
+    base_url='',
+    api_key='',
     max_retries=3,
 )
 
