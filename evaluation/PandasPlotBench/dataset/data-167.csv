@@ -1,0 +1,5 @@
+x1,y1,x2,y2,arrowstyle,patchB,shrinkB,connectionstyle,text
+0.3,0.3,0.7,0.7,-,,0,"arc3,rad=0.3",connect
+0.3,0.3,0.7,0.7,-,ellipse,0,"arc3,rad=0.3",clip
+0.3,0.3,0.7,0.7,-,ellipse,5,"arc3,rad=0.3",shrink
+0.3,0.3,0.7,0.7,fancy,ellipse,5,"arc3,rad=0.3",mutate

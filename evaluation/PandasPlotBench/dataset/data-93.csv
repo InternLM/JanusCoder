@@ -1,0 +1,12 @@
+x,y,text,h_align,v_align,rotation,font_size,color
+0.25,0.25,left top,left,top,0,10,black
+0.25,0.25,left bottom,left,bottom,0,10,black
+0.75,0.75,right bottom,right,bottom,0,10,black
+0.75,0.75,right top,right,top,0,10,black
+0.75,0.25,center top,center,top,0,10,black
+0.25,0.5,right center,right,center,90,10,black
+0.25,0.5,left center,left,center,90,10,black
+0.5,0.5,middle,center,center,0,10,red
+0.75,0.5,centered,center,center,90,10,black
+0.25,0.75,"rotated
+with newlines",center,center,45,10,black

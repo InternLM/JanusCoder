@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "plotting-benchmark"
+version = "0.1.0"
+description = "Benchmark for models that write a code for drawing a plot"
+authors = ["Timur Galimzyanov <timur.galimzyanov@jetbrains.com>"]
+readme = "README.md"
+package-mode = true
+packages = [{include = "plotting_benchmark"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10, <3.13"
+pandas = "^2.2.2"
+tqdm = "^4.66.2"
+nbformat = "^5.10.4"
+natsort = "^8.4.0"
+requests = "^2.31.0"
+tiktoken = "^0.7.0"
+omegaconf = "^2.3.0"
+python-dotenv = "^1.0.1"
+nbconvert = "^7.16.3"
+jupyter = "^1.0.0"
+matplotlib = "^3.8.4"
+jupyter-contrib-nbextensions = "^0.7.0"
+notebook = "6.4.12"
+numpy = "^1.26.4"
+vllm = {version = "0.8.5.post1", optional = true}
+code-bert-score = {version = "*", optional = true}
+scipy = "^1.13.0"
+seaborn = "^0.13.2"
+plotly = "^5.22.0"
+kaleido = "0.2.1"
+python-docx = "^1.1.2"
+datasets = "^3.1.0"
+
+fire = "^0.7.0"
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.0.0"
+ruff = "^0.4.1"
+[tool.poetry.extras]
+local_gpu = ["vllm", "code-bert-score"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"

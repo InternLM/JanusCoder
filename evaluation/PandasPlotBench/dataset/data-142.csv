@@ -1,0 +1,3 @@
+x,y,text,size,rotation,h_align,v_align,box_style,ec,fc
+0.6,0.7,eggs,50,30,center,center,round,"(1.0, 0.5, 0.5)","(1.0, 0.8, 0.8)"
+0.55,0.6,spam,50,-25,right,top,square,"(1.0, 0.5, 0.5)","(1.0, 0.8, 0.8)"

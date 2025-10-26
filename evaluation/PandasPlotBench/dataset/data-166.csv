@@ -1,0 +1,4 @@
+x_center,y_center,width,height,angle,color
+10,10,16,5,30,r
+30,10,16,5,170,g
+50,10,16,5,230,b

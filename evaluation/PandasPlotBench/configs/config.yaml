@@ -1,0 +1,17 @@
+paths:
+  out_folder: "out_results" # for output files
+  dataset_folder: "dataset"
+  results_filename: "results.json" # json stores temporarily plotting responses. Located in the out_folder
+  bench_stat_filename: "benchmark_stat.jsonl" # json stores final statistics of the benchmark results. Located in the out_folder
+  # instructs_file: "instructs/instructs.json" # Optional. Default instructs exists. json stores instructs for plot generation and LLM-benchmarking.
+benchmark_types: ["vis", "task"] # Options: "vis", "task", "codebert"
+plotting_lib: "matplotlib" # "matplotlib", "seaborn", "plotly", "lets-plot" (does not work)
+data_descriptor: "head" # data descriptor. Options: "pycharm", "datalore", "lida", "head", "describe", "empty"
+model_plot_gen:
+  names: ["/path/to/januscoder"] # Models to benchmark
+  parameters: # List of additional model parameters.
+    temperature: 0.0
+model_judge:
+  name: "openai/gpt-4o-2024-05-13"
+  parameters: # List of additional model parameters.
+    temperature: 0.0
