@@ -1,8 +1,8 @@
 # JanusCoder
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-2505.19897-b31b1b.svg)](https://arxiv.org/abs/2505.19897)  -->
+[![arXiv](https://img.shields.io/badge/arXiv-2510.23538-b31b1b.svg)](http://arxiv.org/abs/2510.23538) 
 ![License](https://img.shields.io/badge/License-MIT-blue)
 [![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](./JanusCoder_technical_report.pdf)
-[![Discord](https://img.shields.io/discord/1222168244673314847?logo=discord&style=flat)](https://discord.com/invite/rXS2XbgfaD)
+<!-- [![Discord](https://img.shields.io/discord/1222168244673314847?logo=discord&style=flat)](https://discord.com/invite/rXS2XbgfaD) -->
 <!-- [![Generic badge](https://img.shields.io/badge/WeChat-机器之心-green.svg?logo=wechat)](https://mp.weixin.qq.com/s/naVskQ9btJFkoUyyQVr7zA) -->
 <!-- [![🌐 Website](https://img.shields.io/badge/Website-🌐-informational)](https://qiushisun.github.io/ScienceBoard-Home/) -->
 <!-- <a href = "https://zhuanlan.zhihu.com/p/1914038712540574158"><img src="https://img.shields.io/badge/-%E7%9F%A5%E4%B9%8E-%232f6be0" target="_blank"></a> -->
@@ -118,18 +118,17 @@ For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scr
 For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark) and [Interactscience](https://github.com/open-compass/InteractScience) can be run the instructions in their original repositories. You can fork/clone the original repos to reuse their official environments and configs.
 
 
-
 ## 📚License
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
 ## 📋 Citation
-If you are interested in our work or find this repository / our data helpful, please consider using the following citation format when referencing our paper:
+🫶  If you are interested in our work or find the repository / checkpoints / data helpful, please consider using the following citation format when referencing our paper:
 
 ```bibtex
 @article{sun2025januscoder,
   title={JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intelligence},
   author={Sun, Qiushi and Gong, Jingyang and Liu, Yang and Chen, Qiaosheng and Li, Lei and Chen, Kai and Guo, Qipeng and Kao, Ben and Yuan, Fei},
-  journal={Preprint},
+  journal={arXiv preprint arXiv:2510.23538},
   year={2025}
 }
 ```
