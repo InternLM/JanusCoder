@@ -28,6 +28,18 @@ JanusCoder is a suite of open models that establish a unified visual–programma
 > [!NOTE]  
 > Due to company policy, we need some additional time to release all datasets and checkpoints. If you require access to more data, please feel free to send qiushisun@connect.hku.hk an email.
 
+## 🤗 Checkpoints
+
+We provide the checkpoints of JanusCoder series on Hugging Face:
+
+| Model Name          | Description                                  | Download                                                   |
+| ------------------- | -------------------------------------------- | ---------------------------------------------------------- |
+| JanusCoder-8B | 8B text model based on Qwen3-8B.             | 🤗 [Model](https://huggingface.co/internlm//JanusCoder-8B)  |
+| JanusCoder-14B      | 14B text model based on Qwen3-14B.           | 🤗 [Model](https://huggingface.co/internlm//JanusCoder-14B) |
+| JanusCoderV-7B      | 7B multimodal model based on Qwen2.5-VL-7B.  | 🤗 [Model](https://huggingface.co/internlm//JanusCoderV-7B) |
+| JanusCoderV-8B      | 8B multimodal model based on InternVL3.5-8B. | 🤗 [Model](https://huggingface.co/internlm//JanusCoderV-8B) |
+
+
 ## 📑 Data Synthesis Toolkit
 
 We provide a versatile data synthesis toolkit that generates multimodal code data across heterogeneous domains—ranging from charts and Web UIs to visual artifacts and code-driven animations—while greatly reducing engineering efforts for large-scale corpus creation. ￼
@@ -88,10 +100,10 @@ We primarily follow the official training pipelines provided. Users can directly
 
 | Our Model        | Upstream Base | Training Pipelines |
 |-------------------|---------------|----------------------------------|
-| JanusCoder-8B     | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | [Qwen3 GitHub](https://github.com/QwenLM/Qwen) |
-| JanusCoder-14B    | [Qwen/Qwen3-14B](https://huggingface.co/Qwen/Qwen3-14B) | [Qwen3 GitHub](https://github.com/QwenLM/Qwen) |
-| JanusCoderV-7B    | [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | [Qwen-VL GitHub](https://github.com/QwenLM/Qwen-VL) |
-| JanusCoderV-8B    | [OpenGVLab/InternVL3_5-8B](https://huggingface.co/OpenGVLab/InternVL3_5-8B) | [InternVL GitHub](https://github.com/OpenGVLab/InternVL) |
+| 🤗 [JanusCoder-8B](https://huggingface.co/internlm/JanusCoder-8B)     | [Qwen/Qwen3-8B](https://huggingface.co/Qwen/Qwen3-8B) | [Qwen3 GitHub](https://github.com/QwenLM/Qwen) |
+| 🤗 [JanusCoder-14B](https://huggingface.co/internlm/JanusCoder-14B)    | [Qwen/Qwen3-14B](https://huggingface.co/Qwen/Qwen3-14B) | [Qwen3 GitHub](https://github.com/QwenLM/Qwen) |
+| 🤗 [JanusCoderV-7B](https://huggingface.co/internlm/JanusCoderV-7B)    | [Qwen/Qwen2.5-VL-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) | [Qwen-VL GitHub](https://github.com/QwenLM/Qwen-VL) |
+| 🤗 [JanusCoderV-8B](https://huggingface.co/internlm/JanusCoderV-8B)    | [OpenGVLab/InternVL3_5-8B](https://huggingface.co/OpenGVLab/InternVL3_5-8B) | [InternVL GitHub](https://github.com/OpenGVLab/InternVL) |
 
 We also provide some typical training configuration file for llamafactory users in [training_files](./training_files/).
 
