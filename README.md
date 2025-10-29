@@ -122,7 +122,7 @@ For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsB
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
 ## 📋 Citation
-🫶  If you are interested in our work or find the repository / checkpoints / data helpful, please consider using the following citation format when referencing our paper:
+🫶  If you are interested in our work or find the repository / checkpoints / benchmark / data helpful, please consider using the following citation format when referencing our papers:
 
 ```bibtex
 @article{sun2025januscoder,
@@ -131,4 +131,26 @@ This project is licensed under the Apache 2.0 License. See the LICENSE file for 
   journal={arXiv preprint arXiv:2510.23538},
   year={2025}
 }
+
+@article{sun2024survey,
+  title={A survey of neural code intelligence: Paradigms, advances and beyond},
+  author={Sun, Qiushi and Chen, Zhirui and Xu, Fangzhi and Cheng, Kanzhi and Ma, Chang and Yin, Zhangyue and Wang, Jianing and Han, Chengcheng and Zhu, Renyu and Yuan, Shuai and others},
+  journal={arXiv preprint arXiv:2403.14734},
+  year={2024}
+}
+
+@article{chen2025interactscience,
+  title={InteractScience: Programmatic and Visually-Grounded Evaluation of Interactive Scientific Demonstration Code Generation},
+  author={Chen, Qiaosheng and Liu, Yang and Li, Lei and Chen, Kai and Guo, Qipeng and Cheng, Gong and Yuan, Fei},
+  journal={arXiv preprint arXiv:2510.09724},
+  year={2025}
+}
+
+@article{sun2025codeevo,
+  title={CodeEvo: Interaction-Driven Synthesis of Code-centric Data through Hybrid and Iterative Feedback},
+  author={Sun, Qiushi and Gong, Jinyang and Li, Lei and Guo, Qipeng and Yuan, Fei},
+  journal={arXiv preprint arXiv:2507.22080},
+  year={2025}
+}
+
 ```
