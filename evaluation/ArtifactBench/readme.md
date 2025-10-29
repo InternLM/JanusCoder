@@ -1,91 +1,121 @@
-This guide outlines the step-by-step process for setting up the environment, running model inference, and evaluating the results for Artifactsbench.
+# 🧪 ArtifactsBench Quick Start Guide
 
-## 🚀 1. Clone Repository and Environment Setup
+The evaluation of artifacts is based on [Tencent-Hunyuan/ArtifactsBenchmark](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark), which provides a benchmark for evaluating multimodal and interactive reasoning capabilities of models.
+
+ The dataset file `artifacts_bench_lite.json` is the **lite subset** mentioned in the paper.
+
+## 🚀 1. Clone the Repository and Environment Setup
+
 First, clone the original repository and enter the project directory:
 
 ```
-git clone https://github.com/open-compass/InteractScience.git
-cd InteractScience
+git clone https://github.com/Tencent-Hunyuan/ArtifactsBenchmark.git
+cd ArtifactsBenchmark
 ```
 
-Then install the dependencies:
+Then install the required dependencies:
 
 ```
-# Install project dependencies
-npm install
-
-# Install Playwright browsers
-npx playwright install
+pip install vllm==0.8.3
+pip install pytest-playwright
+playwright install
+playwright install-deps
+pip install transformers
+pip install requests
+pip install tqdm
 ```
 
-## ⚙️ 2. Model Inference
+## 📘 2. Data Format
 
-Use the `run_generation.sh` script to perform model inference:
+You can use your own model to perform inference based on the **question** field in `dataset/artifacts_bench.json` and save the corresponding output in the **answer** field.
 
-```
-# Edit the script to configure model path and parameters
-vim run_generation.sh
-
-# Run inference (requires model path configuration)
-bash run_generation.sh
-```
-
--  Starts the vLLM API server
-
--  Calls `test_llm.py` for model inference
-
--  Saves results to the `eval/` directory
-
-## 🧩 3. Automated Testing
-
-Use the `run_benchmark.sh` script for the full automated testing pipeline:
+ Each record follows this format:
 
 ```
-# Set the model name to be tested
-export MODEL="your_model_name"
-
-# Run the benchmark
-bash run_benchmark.sh
+{
+    "index": "unique identifier in the dataset that corresponds one-to-one with 'question'",
+    "question": "each 'question' in ArtifactsBench",
+    "answer": "the answer inferred by your model based on the 'question'"
+}
 ```
 
-### Testing workflow
+## ⚙️ 3. Evaluation with Gemini
 
-1. Extract HTML code from inference results (`extract_and_save_code.py`)
-2.  Run Program Functionality Testing (PFT) using `playwright_PFT.config.js`
-3.  Run Visual Quality Testing (VQT) using `playwright_VQT.config.js`
-4.  Compute CLIP similarity scores (`clip_score.py`)
-5.  Save all results to the `results/` directory
-
-## 🧠 4. VLM-as-Judge Evaluation
-
-Use `run_vlm_as_judge.sh` for automatic scoring with a vision-language model:
+Run the following command to evaluate your model outputs using the Gemini model:
 
 ```
-# Edit model and path configurations in the script
-vim run_vlm_as_judge.sh
+api_key=xxx
+model_marker=xxx
+api_url=xxx
+screenshots_count=3
+path_with_index=xxx
+save_path=xxx
+screenshots_dir=xxx
+tokenizer_dir=xxx
+num_processes=16
 
-# Run VLM-based evaluation
-bash run_vlm_as_judge.sh
+python3 src/infer_gemini.py \
+    $path_with_index \
+    $save_path \
+    $screenshots_dir \
+    $screenshots_count \
+    $api_key \
+    $model_marker \
+    $api_url \
+    $tokenizer_dir \
+    --num_processes $num_processes
 ```
 
-Evaluation description:
+## 🧩 4. Parameter Description
 
--  Uses a vision-language model to score generated results
+Parameters:
 
--  Compares generated screenshots with reference screenshots
+**api_key**
 
--  Evaluates based on predefined checklists
+Your API key for accessing the Gemini model.
 
-## 📊 5. Results Analysis
+**model_marker**
 
-Finally, calculate the overall metrics and scores using the following scripts:
+ The specific model marker used within Gemini.
 
-```
-python cal_metrics.py
-python cal_vlm_as_judege_score.py
-```
+**api_url**
 
-All final evaluation results will be saved in the `results/` directory.
+The API endpoint for sending POST requests.
+
+**screenshots_count**
+
+Number of screenshots to feed into Gemini.
+
+**path_with_index**
+
+Input file path containing entries with `index`, `question`, and `answer`.
+
+**save_path**
+
+Path to save the output results (adds `gemini_reason` and `gemini_ans` fields).
+
+**screenshots_dir**
+
+Directory where corresponding screenshots are stored.
+
+**tokenizer_dir**
+
+Path to the tokenizer model to control token length.
+
+**num_processes**
+
+Number of parallel processes for inference (e.g., 16).
 
 
 
+## 📊 5. Output Description
+
+After evaluation, each entry in the saved file will include:
+
+-  `gemini_reason`: Gemini’s reasoning explanation
+
+-  `gemini_ans`: The score provided by Gemini
+
+This completes the quick start for running inference and evaluation with ArtifactsBenchmark.
+
+ You can begin by using the lite subset `artifacts_bench_lite.json` for a faster evaluation process.

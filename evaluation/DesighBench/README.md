@@ -11,4 +11,3 @@ Please refer to [DesignBench](https://webpai.github.io/DesignBench/) for more de
 1. Configure the url and api key of GPT-4o at the beginning of `code/evaluator/metric.py`.
 2. Configure `scripts/eval.sh`
 3. Run the evaluation script: `bash scripts/eval.sh`.
-
