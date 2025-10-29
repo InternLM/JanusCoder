@@ -1,8 +1,8 @@
 # JanusCoder
 [![arXiv](https://img.shields.io/badge/arXiv-2510.23538-b31b1b.svg)](http://arxiv.org/abs/2510.23538) 
-![License](https://img.shields.io/badge/License-MIT-blue)
+[![license](./assets/license.svg)](./LICENSE)
 [![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](./JanusCoder_technical_report.pdf)
-<!-- [![Discord](https://img.shields.io/discord/1222168244673314847?logo=discord&style=flat)](https://discord.com/invite/rXS2XbgfaD) -->
+[![Discord](https://img.shields.io/discord/1222168244673314847?logo=discord&style=flat)](https://discord.com/invite/xa29JuW87d)
 <!-- [![Generic badge](https://img.shields.io/badge/WeChat-机器之心-green.svg?logo=wechat)](https://mp.weixin.qq.com/s/naVskQ9btJFkoUyyQVr7zA) -->
 <!-- [![🌐 Website](https://img.shields.io/badge/Website-🌐-informational)](https://qiushisun.github.io/ScienceBoard-Home/) -->
 <!-- <a href = "https://zhuanlan.zhihu.com/p/1914038712540574158"><img src="https://img.shields.io/badge/-%E7%9F%A5%E4%B9%8E-%232f6be0" target="_blank"></a> -->
@@ -11,9 +11,10 @@ JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intell
 
 ## 🗞️ Updates
 
+- **2025-10-29**: We release the [checkpoints](https://huggingface.co/collections/internlm/januscoder) of JanusCoder series 🤗
 - **2025-10-07**: Initial release of our [technical report](./JanusCoder_technical_report.pdf), code, data samples, and [🌐 Project Page](https://qiushisun.github.io/ScienceBoard-Home/). Check it out! 🚀
 
-
+> [!NOTE]  
 This release represents the public implementation; the full implementation and data will be made available after internal company policy requirements are met.
 
 ## 📑 Intro
