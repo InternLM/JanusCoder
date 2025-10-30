@@ -35,7 +35,7 @@ We provide the checkpoints of JanusCoder series on Hugging Face:
 | Model Name          | Description                                  | Download(Huggingface)                      | Download(ModelScope)    | 
 | ------------------- | -------------------------------------------- | ---------------------------------------------------------- | ---------------------------------------------------------- |
 | JanusCoder-8B | 8B text model based on Qwen3-8B.             | 🤗 [Model](https://huggingface.co/internlm/JanusCoder-8B)  | 🤖 [Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoder-8B)  |
-| JanusCoder-14B      | 14B text model based on Qwen3-14B.           | 🤗 [Model](https://huggingface.co/internlm/JanusCoder-14B) | 🤖[Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoder-14B) |
+| JanusCoder-14B      | 14B text model based on Qwen3-14B.           | 🤗 [Model](https://huggingface.co/internlm/JanusCoder-14B) | 🤖 [Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoder-14B) |
 | JanusCoderV-7B      | 7B multimodal model based on Qwen2.5-VL-7B.  | 🤗 [Model](https://huggingface.co/internlm/JanusCoderV-7B) | 🤖 [Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoderV-7B) |
 | JanusCoderV-8B      | 8B multimodal model based on InternVL3.5-8B. | 🤗 [Model](https://huggingface.co/internlm/JanusCoderV-8B) | 🤖 [Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoderV-8B) |
 
