@@ -1,7 +1,7 @@
 # JanusCoder
 [![arXiv](https://img.shields.io/badge/arXiv-2510.23538-b31b1b.svg)](http://arxiv.org/abs/2510.23538) 
 [![license](./assets/license.svg)](./LICENSE)
-[![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](./JanusCoder_technical_report.pdf)
+[![Paper page](https://huggingface.co/datasets/huggingface/badges/resolve/main/paper-page-sm.svg)](https://huggingface.co/papers/2510.23538)
 [![Discord](https://img.shields.io/discord/1222168244673314847?logo=discord&style=flat)](https://discord.com/invite/xa29JuW87d)
 <!-- [![Generic badge](https://img.shields.io/badge/WeChat-机器之心-green.svg?logo=wechat)](https://mp.weixin.qq.com/s/naVskQ9btJFkoUyyQVr7zA) -->
 <!-- [![🌐 Website](https://img.shields.io/badge/Website-🌐-informational)](https://qiushisun.github.io/ScienceBoard-Home/) -->
@@ -40,7 +40,7 @@ We provide the checkpoints of JanusCoder series on Hugging Face:
 | JanusCoderV-8B      | 8B multimodal model based on InternVL3.5-8B. | 🤗 [Model](https://huggingface.co/internlm/JanusCoderV-8B) | 🤖 [Model](https://www.modelscope.cn/models/Shanghai_AI_Laboratory/JanusCoderV-8B) |
 
 
-## 📑 Data Synthesis Toolkit
+## ⚙️ Data Synthesis Toolkit
 
 We provide a versatile data synthesis toolkit that generates multimodal code data across heterogeneous domains—ranging from charts and Web UIs to visual artifacts and code-driven animations—while greatly reducing engineering efforts for large-scale corpus creation. ￼
 
