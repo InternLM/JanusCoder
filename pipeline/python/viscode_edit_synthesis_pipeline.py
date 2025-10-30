@@ -14,6 +14,7 @@ import json
 import os
 import re
 import base64
+from argparse import ArgumentParser
 import psutil
 import threading
 
@@ -245,30 +246,48 @@ def process_sample(_sample: Dict, _rng_seed: int, _gen_url, _gen_key, _gen_model
     return new_item
 
 if __name__ == "__main__":
-    source_fp = '/path/to/source.jsonl'
-    dump_fp = '/path/to/output.jsonl'
-    api_timeout = 60
-    execution_timeout = 20
-    # concurrency = max(int(cpu_count() / 2), 1)
-    concurrency = 32
+    parser = ArgumentParser()
+    parser.add_argument('--input-path', type=str)
+    parser.add_argument('--output-path', type=str)
+    parser.add_argument('--api-timeout', type=int, default=60)
+    parser.add_argument('--execution-timeout', type=int, default=20)
+    parser.add_argument('--num-worker', type=int, default=max(int(cpu_count() / 2), 1))
+    parser.add_argument('--solver-url-base', type=str)
+    parser.add_argument('--solver-api-key', type=str)
+    parser.add_argument('--solver-model-name', type=str)
+    parser.add_argument('--solver-temperature', type=float, default=0.5)
+    parser.add_argument('--judge-url-base', type=str)
+    parser.add_argument('--judge-api-key', type=str)
+    parser.add_argument('--judge-model-name', type=str)
+    parser.add_argument('--judge-temperature', type=float, default=0.0)
+    parser.add_argument('--start-index', type=int, default=0)
+    parser.add_argument('--end-index', type=int, default=int(1e7))
+    parser.add_argument('--max-retries', type=int, default=3)
+    args = parser.parse_args()
 
-    gen_url = "https://generation/api/address"
-    gen_key = "generation/api/key"
-    gen_model = "generation/model/name"
+    source_fp = args.input_path
+    dump_fp = args.output_path
+    api_timeout = args.api_timeout
+    execution_timeout = args.execution_timeout
+    concurrency = args.num_worker
 
-    judge_url = "https://judge/api/address"
-    judge_key = "generation/api/key"
-    judge_model = "generation/model/name"
+    gen_url = args.solver_url_base
+    gen_key = args.solver_api_key
+    gen_model = args.solver_model_name
 
-    process_start_idx = 0
-    process_end_idx = 300000
+    judge_url = args.judge_url_base
+    judge_key = args.judge_api_key
+    judge_model = args.judge_model_name
+
+    process_start_idx = args.start_index
+    process_end_idx = args.end_index
 
     gen_constant_pack = {}
-    gen_constant_pack['max_retries'] = 3
+    gen_constant_pack['max_retries'] = args.max_retries
     gen_constant_pack['gen_max_length'] = 100072
-    gen_constant_pack['gen_temperature'] = 0.5
+    gen_constant_pack['gen_temperature'] = args.solver_temperature
     gen_constant_pack['judge_max_length'] = 12800
-    gen_constant_pack['judge_temperature'] = 0.0
+    gen_constant_pack['judge_temperature'] = args.judge_temperature
 
     gen_constant_pack['modify_directions'] = [
         "change marker color", "change marker shape", "change marker size", "adjust marker opacity",

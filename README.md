@@ -56,36 +56,42 @@ Extend, refine and derive new text-centric data for chart tasks
    
 ```bash
 python data_synthesis/viscode_extend_synthesis_pipeline.py \
-    --input raw_data/viscode \
-    --output processed/viscode_extended
-    --output processed/mathematica_extended
+  --input-path path/to/source.jsonl \
+  --output-path path/to/output.jsonl \
+  --api-timeout [Optional, seconds before timeout for each api request] \
+  --execution-timeout [Optional, seconds before timeout for each script execution] \
+  --num-worker [Optional, number of parallel workers] \
+  --solver-url-base [base url for solver agent] \
+  --solver-api-key [api key for solver agent] \
+  --solver-model-name [model name for solver agent] \
+  --solver-temperature [Optional, model temperature for solver agent] \
+  --judge-url-base [base url for judge agent] \
+  --judge-api-key [api key for judge agent] \
+  --judge-model-name [model name for judge agent] \
+  --judge-temperature [Optional, temperature for judge agent] \
+  --total-trial [Optional, total trial of extension]
 ```
 
 Extend and derive new text-centric data for visual editing tasks
 
 ```bash
-python data_synthesis/viscode_edit_synthesis_pipeline.py \
-    --input processed/viscode_extended \
-    --output processed/viscode_edited
-    --output processed/mathematica_extended
-```
-
-Build data for generating dynamic animations with Manim
-
-
-```bash
-python data_synthesis/recontext_manim_data.py \
-    --input raw_data/manim \
-    --output processed/manim_recontext
-    --output processed/mathematica_extended
-```
-
-Extend scientific visualizations with Mathematica
-
-```bash
-python data_synthesis/mathematica_extend_synthesis_pipeline.py \
-    --input raw_data/mathematica \
-    --output processed/mathematica_extended
+python data_synthesis/viscode_edit_synthesis_pipeline.py 
+  --input-path path/to/source.jsonl \
+  --output-path path/to/output.jsonl \
+  --api-timeout [Optional, seconds before timeout for each api request] \
+  --execution-timeout [Optional, seconds before timeout for each script execution] \
+  --num-worker [Optional, number of parallel workers] \
+  --solver-url-base [base url for solver agent] \
+  --solver-api-key [api key for solver agent] \
+  --solver-model-name [model name for solver agent] \
+  --solver-temperature [Optional, model temperature for solver agent] \
+  --judge-url-base [base url for judge agent] \
+  --judge-api-key [api key for judge agent] \
+  --judge-model-name [model name for judge agent] \
+  --judge-temperature [Optional, temperature for judge agent] \
+  --start-index [Optional, start index if you only want to process part of your dataset] \
+  --end-index [Optional, end index if you only want to process part of your dataset] \
+  --max-retries [Optional, max exploration retries for each sample]
 ```
 
 More scripts will be released soon.

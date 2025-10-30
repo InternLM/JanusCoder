@@ -1,4 +1,5 @@
 from multiprocessing import Pool, cpu_count
+from argparse import ArgumentParser
 import multiprocessing
 from tqdm import tqdm
 from typing import Tuple, List, Dict
@@ -221,27 +222,44 @@ def process_sample(_rng_seed: int, _dataset, _gen_url, _gen_key, _gen_model, _ju
     return new_item
 
 if __name__ == "__main__":
-    source_fp = '/path/to/source.jsonl'
-    dump_fp = '/path/to/output.jsonl'
-    api_timeout = 60
-    execution_timeout = 20
-    concurrency = 32
+    parser = ArgumentParser()
+    parser.add_argument('--input-path', type=str)
+    parser.add_argument('--output-path', type=str)
+    parser.add_argument('--api-timeout', type=int, default=60)
+    parser.add_argument('--execution-timeout', type=int, default=20)
+    parser.add_argument('--num-worker', type=int, default=max(int(cpu_count() / 2), 1))
+    parser.add_argument('--solver-url-base', type=str)
+    parser.add_argument('--solver-api-key', type=str)
+    parser.add_argument('--solver-model-name', type=str)
+    parser.add_argument('--solver-temperature', type=float, default=0.5)
+    parser.add_argument('--judge-url-base', type=str)
+    parser.add_argument('--judge-api-key', type=str)
+    parser.add_argument('--judge-model-name', type=str)
+    parser.add_argument('--judge-temperature', type=float, default=0.0)
+    parser.add_argument('--total-trial', type=int, default=int(1e5))
+    args = parser.parse_args()
 
-    gen_url = "https://generation/api/address"
-    gen_key = "generation/api/key"
-    gen_model = "generation/model/name"
+    source_fp = args.input_path
+    dump_fp = args.output_path
+    api_timeout = args.api_timeout
+    execution_timeout = args.execution_timeout
+    concurrency = args.num_worker
 
-    judge_url = "https://judge/api/address"
-    judge_key = "generation/api/key"
-    judge_model = "generation/model/name"
+    gen_url = args.solver_url_base
+    gen_key = args.solver_api_key
+    gen_model = args.solver_model_name
 
-    gen_trial = int(1e5)
+    judge_url = args.judge_url_base
+    judge_key = args.judge_api_key
+    judge_model = args.judge_model_name
+
+    gen_trial = args.total_trial
 
     gen_constant_pack = {}
     gen_constant_pack['gen_max_length'] = 100072
-    gen_constant_pack['gen_temperature'] = 0.5
+    gen_constant_pack['gen_temperature'] = args.solver_temperature
     gen_constant_pack['judge_max_length'] = 12800
-    gen_constant_pack['judge_temperature'] = 0.0
+    gen_constant_pack['judge_temperature'] = args.judge_temperature
 
     gen_constant_pack['system_prompt_for_desc'] = (
         "You are an expert data visualization assistant."
