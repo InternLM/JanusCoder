@@ -140,6 +140,10 @@ For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsB
 ## 📚License
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
 
+## 💐Acknowledgement
+We thank [Fangzhi Xu](https://xufangzhi.github.io/) and [Zhangyue Yin](https://scholar.google.com/citations?user=9gRQqSkAAAAJ) for their valuable feedback on improving the manuscript's presentation, and [Zichen Ding](https://heroding77.github.io/) for the assistance in resolving issues encountered during the training of InternVL 3.5. We are also grateful to [Fahd Mirza](https://www.youtube.com/@fahdmirza) for creating an nice [YouTube video](https://www.youtube.com/watch?v=fbNZn1WF8mI) on running JanusCoder locally.
+
+
 ## 📋 Citation
 🫶  If you are interested in our work or find the repository / checkpoints / benchmark / data helpful, please consider using the following citation format when referencing our papers:
 
