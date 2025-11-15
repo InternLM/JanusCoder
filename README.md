@@ -11,6 +11,7 @@ JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intell
 
 ## 🗞️ Updates
 
+- **2025-11-15**: We release data samples of JanusCode-800K, check section [Data Samples](#💽-Data) for more details.
 - **2025-10-29**: We release the  [preprint](http://arxiv.org/abs/2510.23538) and [checkpoints](https://huggingface.co/collections/internlm/januscoder) of JanusCoder series 🤗
 - **2025-10-07**: Initial release of our [technical report](./JanusCoder_technical_report.pdf), code, data samples, and [🌐 Project Page](https://qiushisun.github.io/ScienceBoard-Home/). Check it out! 🚀
 
@@ -135,6 +136,17 @@ bash evaluation/InteractScience/interactscience-januscoderv.sh
 For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scripts provided by OpenCompass.
 
 For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark) and [Interactscience](https://github.com/open-compass/InteractScience) can be run the instructions in their original repositories. You can fork/clone the original repos to reuse their official environments and configs.
+
+
+## 💽 Data Samples
+
+Here we provide data samples of the various data types covered by JanusCode-800K:
+
+- text-centric data: [[Link]](https://drive.google.com/drive/folders/1H0cK_rzGXVB3bVMbUdS1EptV0COSkw-J?usp=sharing)
+- vision-centric data: [Link]
+
+the full implementation and data will be made available after internal company policy requirements are met, stay tuned!
+
 
 
 ## 📚License
