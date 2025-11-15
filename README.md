@@ -11,7 +11,7 @@ JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intell
 
 ## 🗞️ Updates
 
-- **2025-11-15**: We release data samples of JanusCode-800K, check section [Data Samples](#💽-Data-Samples) for more details.
+- **2025-11-15**: We release data samples of JanusCode-800K, check section [Data Samples](#Data-Samples) for more details.
 - **2025-10-29**: We release the  [preprint](http://arxiv.org/abs/2510.23538) and [checkpoints](https://huggingface.co/collections/internlm/januscoder) of JanusCoder series 🤗
 - **2025-10-07**: Initial release of our [technical report](./JanusCoder_technical_report.pdf), code, data samples, and [🌐 Project Page](https://qiushisun.github.io/ScienceBoard-Home/). Check it out! 🚀
 
