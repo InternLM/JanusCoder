@@ -143,11 +143,9 @@ For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsB
 Here we provide data samples of the various data types covered by JanusCode-800K:
 
 - text-centric data: [[Link]](https://drive.google.com/drive/folders/1H0cK_rzGXVB3bVMbUdS1EptV0COSkw-J?usp=sharing)
-- vision-centric data: [Link]
+- vision-centric data: [Link](https://drive.google.com/drive/folders/15V2PMUiFCLDCd8PdCigIchLIGubAoQDw?usp=sharing)
 
 the full implementation and data will be made available after internal company policy requirements are met, stay tuned!
-
-
 
 ## 📚License
 This project is licensed under the Apache 2.0 License. See the LICENSE file for details.
