@@ -139,12 +139,12 @@ For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scr
 For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark) and [Interactscience](https://github.com/open-compass/InteractScience) can be run the instructions in their original repositories. You can fork/clone the original repos to reuse their official environments and configs.
 
 
-## 💽 Data Samples
+## 💽 Data Preview
 
 Here we provide data samples of the various data types covered by JanusCode-800K:
 
 - text-centric data: [[Link]](https://drive.google.com/drive/folders/1H0cK_rzGXVB3bVMbUdS1EptV0COSkw-J?usp=sharing)
-- vision-centric data: [Link](https://drive.google.com/drive/folders/15V2PMUiFCLDCd8PdCigIchLIGubAoQDw?usp=sharing)
+- vision-centric data: [[Link]](https://drive.google.com/drive/folders/15V2PMUiFCLDCd8PdCigIchLIGubAoQDw?usp=sharing)
 
 the full implementation and data will be made available after internal company policy requirements are met, stay tuned!
 
