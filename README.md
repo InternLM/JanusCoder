@@ -11,6 +11,7 @@ JanusCoder: Towards a Foundational Visual-Programmatic Interface for Code Intell
 
 ## 🗞️ Updates
 
+- **2026-05-09**: We are releasing our data at 🤗[JanusCode-800K](https://huggingface.co/datasets/QiushiSun/JanusCode-800K).
 - **2026-01-26**: JanusCoder is accepted by ICLR 2026! 🎉 We will release more resources soon!
 - **2025-11-15**: We release data samples of JanusCode-800K, check section [Data Samples](#Data-Samples) for more details.
 - **2025-10-29**: We release the  [preprint](http://arxiv.org/abs/2510.23538) and [checkpoints](https://huggingface.co/collections/internlm/januscoder) of JanusCoder series 🤗
@@ -134,7 +135,7 @@ bash evaluation/ArtifactBench/artifactbench-januscoder.sh
 bash evaluation/InteractScience/interactscience-januscoderv.sh
 ```
 
-For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scripts provided by OpenCompass.
+For evaluations on LiveCodeBench-v6, MBPP+: We directly adopt the evaluation scripts provided by [OpenCompass](https://github.com/open-compass/opencompass).
 
 For evaluations on [Artifactbench](https://github.com/Tencent-Hunyuan/ArtifactsBenchmark) and [Interactscience](https://github.com/open-compass/InteractScience) can be run the instructions in their original repositories. You can fork/clone the original repos to reuse their official environments and configs.
 
